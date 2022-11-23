@@ -52,7 +52,7 @@ const Login = ({
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: email, password: password }),
     };
-    fetch("/api/auth/login", requestOptions)
+    fetch(`${process.env.REACT_APP_API}/api/auth/login`, requestOptions)
       .then((response) =>
         response
           .json()

@@ -29,7 +29,7 @@ const UserProfile = () => {
       credentials: "include",
       headers: { "Content-Type": "application/json" },
     };
-    fetch(`/api/users/${name}`, requestOptions)
+    fetch(`${process.env.REACT_APP_API}/api/users/${name}`, requestOptions)
       .then((res) => res.json())
       .then((data) => {
         setUserName(data.name.charAt(0).toUpperCase() + data.name.slice(1));

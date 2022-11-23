@@ -26,17 +26,19 @@ function UserButton({ setOpenMessage, setMssg, mssg, openMessage }) {
       credentials: "include",
       headers: { "Content-Type": "application/json" },
     };
-    fetch("/api/auth/logout", requestOptions).then((res) => {
-      if (res.status === 200) {
-        setMssg(
-          `Bye ${
-            authData.name.charAt(0).toUpperCase() + authData.name.slice(1)
-          }, see you soon!`
-        );
-        setOpenMessage(true);
-        setAuthData({ name: "", email: "" });
+    fetch(process.env.REACT_APP_API + "/api/auth/logout", requestOptions).then(
+      (res) => {
+        if (res.status === 200) {
+          setMssg(
+            `Bye ${
+              authData.name.charAt(0).toUpperCase() + authData.name.slice(1)
+            }, see you soon!`
+          );
+          setOpenMessage(true);
+          setAuthData({ name: "", email: "" });
+        }
       }
-    });
+    );
   }
 
   const logIn = () => {

@@ -59,7 +59,7 @@ const Register = ({ setLogin, setRegister, open, setOpen }) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name: name, email: email, password: password }),
     };
-    fetch("/api/auth/register", requestOptions)
+    fetch(`${process.env.REACT_APP_API}/api/auth/register`, requestOptions)
       .then((response) => {
         response.json().then((data) => {
           if (data) console.log(data);

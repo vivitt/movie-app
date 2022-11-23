@@ -61,7 +61,10 @@ function Movie({ item, openMovInf, setOpenMovInf }) {
       credentials: "include",
       headers: { "Content-Type": "application/json" },
     };
-    fetch(`/api/users/favorites/${item.title}`, requestOptions)
+    fetch(
+      `${process.env.REACT_APP_API}/api/users/favorites/${item.title}`,
+      requestOptions
+    )
       .then((res) => res.json())
       .then((data) => {
         userFavs.getFavs();

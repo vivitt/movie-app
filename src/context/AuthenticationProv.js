@@ -7,7 +7,7 @@ const AuthenticationProv = ({ children }) => {
   const { setLoading } = useLoader();
 
   async function getLogUser() {
-    const response = await fetch("/api/auth", {
+    const response = await fetch(process.env.REACT_APP_API + "/api/auth", {
       method: "GET",
       credentials: "include",
       headers: {

@@ -30,7 +30,10 @@ const UserFavs = ({ openMessage, setOpenMessage, mssg, setMssg }) => {
       credentials: "include",
       headers: { "Content-Type": "application/json" },
     };
-    fetch(`/api/users/favorites/${title}`, requestOptions)
+    fetch(
+      `${process.env.REACT_APP_API}/api/users/favorites/${title}`,
+      requestOptions
+    )
       .then((res) => res.json())
       .then((data) => {
         userFavs.getFavs();

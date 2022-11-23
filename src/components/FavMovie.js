@@ -20,7 +20,10 @@ function FavMovie({ item, setMssg, setTitle, setOpenMessage }) {
       credentials: "include",
       headers: { "Content-Type": "application/json" },
     };
-    fetch(`/api/users/removefavorites/${item.title}`, requestOptions)
+    fetch(
+      `${process.env.REACT_APP_API}/api/users/removefavorites/${item.title}`,
+      requestOptions
+    )
       .then((res) => res.json())
       .then((data) => {
         // if (userFavs.favMovies.length === 1) {

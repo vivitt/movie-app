@@ -20,7 +20,7 @@ const Home = ({ openMessage, setOpenMessage, mssg, setMssg }) => {
   const userFavs = useFavContext();
 
   const getMovies = () => {
-    fetch("/api/movies")
+    fetch(process.env.REACT_APP_API + "/api/movies")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

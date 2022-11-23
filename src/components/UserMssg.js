@@ -11,13 +11,7 @@ export default function UserMssg({ mssg, openMessage, setOpenMessage }) {
     horizontal: "center",
   });
   const { vertical, horizontal, open } = state;
-  const handleClose = (
-    event: React.SyntheticEvent | Event,
-    reason?: string
-  ) => {
-    if (reason === "clickaway") {
-      return;
-    }
+  const handleClose = () => {
     setOpenMessage(false);
   };
 
