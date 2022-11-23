@@ -1,0 +1,103 @@
+.movies {
+  width: 100%;
+  max-width: 1200px;
+}
+.movieItemSmall {
+    /* background-color: black;
+    color: white; */
+    border: 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 400px;
+   
+  
+  }
+  .movieItemBig {
+    /* background-color: black;
+    color: white; */
+    border: 0;
+    
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: center;
+    align-items: center;
+    /* max-height: 400px; */
+   
+  
+  }
+  
+  
+  .movieBtn {
+    padding: 0;
+    border-style: none;
+    outline: none;
+    appearance: none;
+    background-color: transparent;
+    /* padding: 2%; */
+   
+  }
+
+  .movieImg {
+   
+    padding: auto;
+    margin: auto;
+  }
+
+  .movieImg img {
+   max-width: 100%
+  }
+
+  .favBtn button {
+    border-radius: 5px;
+    border-style: none;
+    outline: none;
+    appearance: none;
+    /* color: white; */
+    padding: 5px ;
+    margin-bottom: 10px;
+    background-color: transparent;
+    cursor: pointer;
+   
+  }
+
+  .movInfo {
+    padding: 0.1rem 0.3rem ;
+    /* background-color: black;
+    color: white; */
+  
+    text-align: left;
+    
+    max-width: 60%;
+   
+    
+  }
+
+
+  .movInfo span h2 {
+    display: inline;
+    
+  }
+  .info h2 {
+    padding: 0;
+    margin: 0;
+  }
+
+
+  @media (max-width: 649px) { 
+    .movieItemBig {
+      /* background-color: black;
+      color: white; */
+      border: 0;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* max-height: 400px; */
+     
+    
+    }
+  }

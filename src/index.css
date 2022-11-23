@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background: #0f0c29;  /* fallback for old browsers 
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+.nav-bar ul li a {
+  
+  margin: 0.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+
+}
+
+.title h1, .title h2 {
+  
+  text-align: center;
+}
+
+.search {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.selectInputs {
+  display: flex;
+  flex-direction: row wrap;
+}
+.navBar h2 {
+  font-size: 8rem;
+}
+
+
+.watchlist {
+  border-radius: 5px;
+  margin-top: 3px;
+  border-style: none;
+  outline: none;
+  appearance: none;
+  width: 150px;
+
+  
+}
+
+
+
+
+
+
+
+
+.login, .register {
+  background-color: aliceblue;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 1rem;
+
+}
+
+
+.noFavMssg {
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+  text-align: center;
+}
+.backBtn {
+  padding: 2rem;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0.5rem;
+}
+.userInfoLine {
+  display: flex;
+  flex-flow: row wrap;
+}
+@media (max-width: 549px) { 
+  .selectInputs {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
