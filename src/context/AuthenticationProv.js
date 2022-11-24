@@ -7,11 +7,14 @@ const AuthenticationProv = ({ children }) => {
   const { setLoading } = useLoader();
 
   async function getLogUser() {
-    const response = await fetch(`${process.env.REACT_APP_API}/api/auth`, {
-      method: "GET",
-      credentials: "include",
-      headers: { "Content-Type": "application/json" },
-    });
+    const response = await fetch(
+      process.env.REACT_APP_API + "/api/users/favorites",
+      {
+        method: "GET",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+      }
+    );
     try {
       if (response.ok) {
         const data = await response.json();
