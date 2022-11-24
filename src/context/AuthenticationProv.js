@@ -10,9 +10,7 @@ const AuthenticationProv = ({ children }) => {
     const response = await fetch(`${process.env.REACT_APP_API}/api/auth`, {
       method: "GET",
       credentials: "include",
-      // headers: {
-      //   Accept: "application/json",
-      // },
+      headers: { "Content-Type": "application/json" },
     });
     try {
       if (response.ok) {
