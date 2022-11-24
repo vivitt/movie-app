@@ -26,8 +26,6 @@ const AuthenticationProv = ({ children }) => {
           onLogin(data);
 
           setLoading(false);
-        } else {
-          onLogin({});
         }
         setLoading(false);
       })
