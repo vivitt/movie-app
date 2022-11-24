@@ -3,30 +3,43 @@ import { useLoader } from "./LoadContext";
 const AuthenContext = React.createContext("");
 
 const AuthenticationProv = ({ children }) => {
-  const [authData, setAuthData] = useState({});
+  const [authData, setAuthData] = useState({
+    email: "",
+    name: "",
+
+    favMovies: "",
+  });
   const { setLoading } = useLoader();
 
-  async function getLogUser() {
-    const response = await fetch(`${process.env.REACT_APP_API}/api/auth`, {
+  function getLogUser() {
+    const requestOptions = {
       method: "GET",
       credentials: "include",
-      Accept: "application/json",
-    });
-    try {
-      if (response.ok) {
-        const data = await response.json();
-        onLogin(data);
+      headers: { "Content-Type": "application/json" },
+    };
+
+    fetch(`${process.env.REACT_APP_API}/api/auth`, requestOptions)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.email) {
+          onLogin(data);
+
+          setLoading(false);
+        } else {
+          onLogin({
+            email: "",
+            name: "",
+
+            favMovies: "",
+          });
+        }
         setLoading(false);
+      })
 
-        return data;
-      }
-      setLoading(false);
-
-      throw new Error(response.statusText);
-    } catch (error) {
-      console.log(error);
-      return null;
-    }
+      .catch((error) => {
+        console.log(error);
+        return null;
+      });
   }
 
   useEffect(() => {
