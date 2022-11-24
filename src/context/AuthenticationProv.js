@@ -21,7 +21,7 @@ const AuthenticationProv = ({ children }) => {
         onLogin(data);
         setLoading(false);
 
-        return data;
+        //return data;
       }
       setLoading(false);
 
