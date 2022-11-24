@@ -26,12 +26,7 @@ const AuthenticationProv = ({ children }) => {
 
           setLoading(false);
         } else {
-          onLogin({
-            email: "",
-            name: "",
-
-            favMovies: "",
-          });
+          onLogin({});
         }
         setLoading(false);
       })
