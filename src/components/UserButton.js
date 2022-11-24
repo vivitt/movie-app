@@ -26,7 +26,7 @@ function UserButton({ setOpenMessage, setMssg, mssg, openMessage }) {
       credentials: "include",
       headers: { "Content-Type": "application/json" },
     };
-    fetch(process.env.REACT_APP_API + "/api/auth/logout", requestOptions).then(
+    fetch(`${process.env.REACT_APP_API}/api/auth/logout`, requestOptions).then(
       (res) => {
         if (res.status === 200) {
           setMssg(

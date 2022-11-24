@@ -16,7 +16,7 @@ export const FavContextProv = ({ children }) => {
       credentials: "include",
       headers: { "Content-Type": "application/json" },
     };
-    fetch(process.env.REACT_APP_API + "/api/users/favorites", requestOptions)
+    fetch(`${process.env.REACT_APP_API}/api/users/favorites`, requestOptions)
       .then((response) => response.json())
       .then((data) => {
         if (data.favUserMovies) {

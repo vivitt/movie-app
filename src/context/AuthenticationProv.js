@@ -8,7 +8,7 @@ const AuthenticationProv = ({ children }) => {
 
   async function getLogUser() {
     const response = await fetch(
-      process.env.REACT_APP_API + "/api/users/favorites",
+      `${process.env.REACT_APP_API}/api/users/favorites`,
       {
         method: "GET",
         credentials: "include",
