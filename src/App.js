@@ -65,13 +65,12 @@ function App() {
                           path="/users"
                           element={
                             <RequireAuth>
-                              {" "}
                               <UserFavs
                                 openMessage={openMessage}
                                 setOpenMessage={setOpenMessage}
                                 mssg={mssg}
                                 setMssg={setMssg}
-                              />{" "}
+                              />
                             </RequireAuth>
                           }
                         />
