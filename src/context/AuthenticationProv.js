@@ -14,9 +14,7 @@ const AuthenticationProv = ({ children }) => {
   function getLogUser() {
     const requestOptions = {
       credentials: "include",
-      headers: {
-        Accept: "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
     };
 
     fetch(`${process.env.REACT_APP_API}/api/auth/`, requestOptions)
