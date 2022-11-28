@@ -15,7 +15,6 @@ const AuthenticationProv = ({ children }) => {
     const requestOptions = {
       credentials: "include",
       headers: {
-        ContentType: "application/json",
         Accept: "application/json",
       },
     };
