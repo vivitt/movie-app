@@ -20,7 +20,7 @@ const AuthenticationProv = ({ children }) => {
       },
     };
 
-    fetch(`${process.env.REACT_APP_API}/api/auth/`, requestOptions)
+    fetch(`${process.env.REACT_APP_API}/api/auth`, requestOptions)
       .then((response) => response.json())
       .then((data) => {
         if (data.email) {
